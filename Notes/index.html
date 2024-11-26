@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="notepad-files-dual-tone-icon.svg"
+    />
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: 100vh;
+      }
+      .addnote {
+        background-color: #fff;
+        color: #0072ff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+      .addnote:hover {
+        background-color: #0072ff;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.3);
+      }
+      .notescontainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+      }
+      .note {
+        width: 360px;
+        background-color: #fff;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 15px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .note:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .notetitle {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        outline: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .notepara {
+        min-height: 100px;
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        outline: none;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .delbutton {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        background-color: red;
+        color: #fff;
+        border: none;
+        border-radius: 25%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+      .delbutton:hover {
+        background-color: darkred;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="addnote" onclick="createNote()">Create New Note</button>
+    <div class="notescontainer"></div>
+
+    <script>
+      const container = document.querySelector(".notescontainer");
+
+      // Load notes from localStorage
+      function loadNotes() {
+        const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+        savedNotes.forEach(({ title, content }) =>
+          addNoteToDOM(title, content)
+        );
+      }
+
+      // Save notes to localStorage
+      function saveNotes() {
+        const notes = [];
+        document.querySelectorAll(".note").forEach((note) => {
+          const title = note.querySelector(".notetitle").innerText;
+          const content = note.querySelector(".notepara").innerText;
+          notes.push({ title, content });
+        });
+        localStorage.setItem("notes", JSON.stringify(notes));
+      }
+
+      // Add a new note to the DOM
+      function addNoteToDOM(
+        title = "Title",
+        content = "Write your note here..."
+      ) {
+        const note = document.createElement("div");
+        note.className = "note";
+
+        const noteTitle = document.createElement("h3");
+        noteTitle.setAttribute("contenteditable", "true");
+        noteTitle.className = "notetitle";
+        noteTitle.innerText = title;
+
+        const notePara = document.createElement("p");
+        notePara.setAttribute("contenteditable", "true");
+        notePara.className = "notepara";
+        notePara.innerText = content;
+
+        const delButton = document.createElement("button");
+        delButton.className = "delbutton";
+        delButton.innerText = "X";
+        delButton.onclick = function () {
+          container.removeChild(note);
+          saveNotes();
+        };
+
+        noteTitle.oninput = saveNotes;
+        notePara.oninput = saveNotes;
+
+        note.appendChild(noteTitle);
+        note.appendChild(notePara);
+        note.appendChild(delButton);
+        container.appendChild(note);
+      }
+
+      // Create a new note
+      function createNote() {
+        addNoteToDOM();
+        saveNotes();
+      }
+
+      // Load saved notes on page load
+      loadNotes();
+    </script>
+  </body>
+</html>
