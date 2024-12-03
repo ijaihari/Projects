@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color:var(--white);
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +31,7 @@ body {
 .game {
     flex-basis: 400px;
     text-align: center;
+    padding: 5px;
 }
 
 .move-button {
@@ -46,9 +47,9 @@ body {
 
 .disp-move-icon {
     height: 50px;
-   background-color: white;
-   border-radius: 100px;
-   padding: 5px;
+    background-color: var(--white);
+    border-radius: 100px;
+    padding: 5px;
 }
 
 .move-icon {
@@ -75,7 +76,7 @@ h2 {
 
 .game-reset {
     background-color: black;
-    color: white;
+    color: var(--white);
     margin: 10px;
     padding: 10px 20px;
     border: none;
@@ -90,4 +91,22 @@ h2 {
     padding: 10px;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+@media(max-width:580px) {
+    .scorecard {
+        font-size: 1.2rem;
+    }
+
+    .playersMove {
+        font-size: 1.1rem;
+    }
+
+    .disp-move-icon {
+        height: 40px;
+    }
+
+    .game-reset {
+        font-size: 1.2rem;
+    }
 }

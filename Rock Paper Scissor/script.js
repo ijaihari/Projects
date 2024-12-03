@@ -46,7 +46,7 @@ Your Wins: ${score.wins}  Your Losses: ${score.losses} Ties: ${score.ties}`); */
 
   function updateScoreCard() {
     document.querySelector(".scorecard").innerHTML =
-      `Your Wins: ${score.wins}  Your Losses: ${score.losses} Ties: ${score.ties}`;
+      `Your Wins: ${score.wins} | Your Losses: ${score.losses} | Ties: ${score.ties}`;
   }
 
 
