@@ -7,7 +7,7 @@ const products = [
       stars: 4.5,
       count: 87
     },
-    priceCents: 1090,
+    price: 149,
     keywords: [
       "socks",
       "sports",
@@ -22,7 +22,7 @@ const products = [
       stars: 4,
       count: 127
     },
-    priceCents: 2095,
+    price: 449,
     keywords: [
       "sports",
       "basketballs"
@@ -36,7 +36,7 @@ const products = [
       stars: 4.5,
       count: 56
     },
-    priceCents: 799,
+    price: 699,
     keywords: [
       "tshirts",
       "apparel",
