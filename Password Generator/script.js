@@ -8,7 +8,6 @@ let password = '';
 const length = 12;
 let allChars = upperCase + lowerCase + number + symbol;
 
-
 function generate() {
     password += upperCase[Math.floor(Math.random() * upperCase.length)];
     password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
