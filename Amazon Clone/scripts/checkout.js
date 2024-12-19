@@ -1,6 +1,11 @@
 import { cart, removeFromCart } from '../data/cart.js'
 import { products } from '../data/product.js'
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'
+ 
 let cartSummaryHTML = "";
+const today =dayjs();
+const deliveryDate  = today.add(7,'days');
+console.log(deliveryDate.format('dddd , MMMM, D '));
 cart.forEach((cartItem) => {
 
     const productId = cartItem.productId;
@@ -11,6 +16,9 @@ cart.forEach((cartItem) => {
             matchingProduct = product;
         }
     })
+
+   
+
     cartSummaryHTML += `
 <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
           <div class="delivery-date">
@@ -93,4 +101,4 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
         container.remove();
     });
 
-})
+});
