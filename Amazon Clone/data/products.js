@@ -1,94 +1,5 @@
- export const products = [
-  {
-    id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
-    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
-    rating: {
-      stars: 4.5,
-      count: 87
-    },
-    price: 149,
-    keywords: [
-      "socks",
-      "sports",
-      "apparel"
-    ]
-  },
-  {
-    id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    image: "images/products/intermediate-composite-basketball.jpg",
-    name: "Intermediate Size Basketball",
-    rating: {
-      stars: 4,
-      count: 127
-    },
-    price: 449,
-    keywords: [
-      "sports",
-      "basketballs"
-    ]
-  },
-  {
-    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
-    rating: {
-      stars: 4.5,
-      count: 56
-    },
-    price: 699,
-    keywords: [
-      "tshirts",
-      "apparel",
-      "mens"
-    ],
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
-  },
-  {
-    id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-    image: "images/products/black-2-slot-toaster.jpg",
-    name: "2 Slot Toaster - Black",
-    rating: {
-      stars: 5,
-      count: 2197
-    },
-    price: 1899,
-    keywords: [
-      "toaster",
-      "kitchen",
-      "appliances"
-    ]
-  },
-  {
-    id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-    image: "images/products/6-piece-white-dinner-plate-set.jpg",
-    name: "6 Piece White Dinner Plate Set",
-    rating: {
-      stars: 4,
-      count: 37
-    },
-    price: 2067,
-    keywords: [
-      "plates",
-      "kitchen",
-      "dining"
-    ]
-  },
-  {
-    id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-    image: "images/products/6-piece-non-stick-baking-set.webp",
-    name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
-    rating: {
-      stars: 4.5,
-      count: 175
-    },
-    price: 3499,
-    keywords: [
-      "kitchen",
-      "cookware"
-    ]
-  },
+export const products = [
+  
   {
     id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
     image: "images/products/plain-hooded-fleece-sweatshirt-yellow.jpg",
@@ -97,7 +8,7 @@
       stars: 4.5,
       count: 317
     },
-    price: 2400,
+    priceCents: 299,
     keywords: [
       "hoodies",
       "sweaters",
@@ -112,7 +23,7 @@
       stars: 4.5,
       count: 144
     },
-    price: 3599,
+    priceCents: 359,
     keywords: [
       "bathroom",
       "washroom",
@@ -121,6 +32,7 @@
       "bath towels"
     ]
   },
+  
   {
     id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
     image: "images/products/liquid-laundry-detergent-plain.jpg",
@@ -129,7 +41,7 @@
       stars: 4.5,
       count: 305
     },
-    price: 2899,
+    priceCents: 199,
     keywords: [
       "bathroom",
       "cleaning"
@@ -143,7 +55,7 @@
       stars: 4,
       count: 89
     },
-    price: 3390,
+    priceCents: 339,
     keywords: [
       "shoes",
       "running shoes",
@@ -158,7 +70,7 @@
       stars: 4.5,
       count: 235
     },
-    price: 2070,
+    priceCents: 259,
     keywords: [
       "robe",
       "swimsuit",
@@ -177,7 +89,7 @@
       stars: 4.5,
       count: 30
     },
-    price: 1560,
+    priceCents: 1099,
     keywords: [
       "accessories",
       "shades"
@@ -191,7 +103,7 @@
       stars: 4.5,
       count: 562
     },
-    price: 2499,
+    priceCents: 249,
     keywords: [
       "footwear",
       "sandals",
@@ -208,7 +120,7 @@
       stars: 4.5,
       count: 232
     },
-    price: 4599,
+    priceCents: 459,
     keywords: [
       "bedroom",
       "curtains",
@@ -223,11 +135,101 @@
       stars: 4,
       count: 160
     },
-    price: 1699,
+    priceCents: 499,
     keywords: [
       "shorts",
       "apparel",
       "mens"
+    ]
+  },
+  {
+    id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
+    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    rating: {
+      stars: 4.5,
+      count: 87
+    },
+    priceCents: 189,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]
+  },
+  {
+    id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+    image: "images/products/intermediate-composite-basketball.jpg",
+    name: "Intermediate Size Basketball",
+    rating: {
+      stars: 4,
+      count: 127
+    },
+    priceCents: 699,
+    keywords: [
+      "sports",
+      "basketballs"
+    ]
+  },
+  {
+    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+    image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    rating: {
+      stars: 4.5,
+      count: 56
+    },
+    priceCents: 299,
+    keywords: [
+      "tshirts",
+      "apparel",
+      "mens"
+    ],
+    type: "clothing",
+    sizeChartLink: "images/clothing-size-chart.png"
+  }/* ,
+  {
+    id: "54e0eccd-8f36-462b-b68a-8182611d9add",
+    image: "images/products/black-2-slot-toaster.jpg",
+    name: "2 Slot Toaster - Black",
+    rating: {
+      stars: 5,
+      count: 2197
+    },
+    priceCents: 1899,
+    keywords: [
+      "toaster",
+      "kitchen",
+      "appliances"
+    ]
+  },
+  {
+    id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
+    image: "images/products/6-piece-white-dinner-plate-set.jpg",
+    name: "6 Piece White Dinner Plate Set",
+    rating: {
+      stars: 4,
+      count: 37
+    },
+    priceCents: 2067,
+    keywords: [
+      "plates",
+      "kitchen",
+      "dining"
+    ]
+  },
+  {
+    id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+    image: "images/products/6-piece-non-stick-baking-set.webp",
+    name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
+    rating: {
+      stars: 4.5,
+      count: 175
+    },
+    priceCents: 3499,
+    keywords: [
+      "kitchen",
+      "cookware"
     ]
   },
   {
@@ -238,7 +240,7 @@
       stars: 5,
       count: 846
     },
-    price: 3074,
+    priceCents: 3074,
     keywords: [
       "water boiler",
       "appliances",
@@ -253,7 +255,7 @@
       stars: 4,
       count: 99
     },
-    price: 2374,
+    priceCents: 2374,
     keywords: [
       "kleenex",
       "tissues",
@@ -270,7 +272,7 @@
       stars: 4,
       count: 215
     },
-    price: 2200,
+    priceCents: 2200,
     keywords: [
       "hats",
       "straw hats",
@@ -286,7 +288,7 @@
       stars: 4.5,
       count: 52
     },
-    price: 1799,
+    priceCents: 1799,
     keywords: [
       "jewelry",
       "accessories",
@@ -301,7 +303,7 @@
       stars: 4.5,
       count: 2465
     },
-    price: 1374,
+    priceCents: 1374,
     keywords: [
       "hooded",
       "hoodies",
@@ -320,7 +322,7 @@
       stars: 4.5,
       count: 119
     },
-    price: 1250,
+    priceCents: 1250,
     keywords: [
       "bathmat",
       "bathroom",
@@ -335,7 +337,7 @@
       stars: 4,
       count: 326
     },
-    price: 2640,
+    priceCents: 2640,
     keywords: [
       "shoes",
       "flats",
@@ -351,7 +353,7 @@
       stars: 4.5,
       count: 2556
     },
-    price: 1599,
+    priceCents: 1599,
     keywords: [
       "tshirts",
       "shirts",
@@ -369,7 +371,7 @@
       stars: 4.5,
       count: 2286
     },
-    price: 8300,
+    priceCents: 8300,
     keywords: [
       "garbage",
       "bins",
@@ -385,7 +387,7 @@
       stars: 4,
       count: 456
     },
-    price: 2399,
+    priceCents: 2399,
     keywords: [
       "bedroom",
       "bed sheets",
@@ -402,7 +404,7 @@
       stars: 5,
       count: 83
     },
-    price: 1250,
+    priceCents: 1250,
     keywords: [
       "hats",
       "winter hats",
@@ -420,7 +422,7 @@
       stars: 4.5,
       count: 9017
     },
-    price: 2290,
+    priceCents: 2290,
     keywords: [
       "pants",
       "apparel",
@@ -435,7 +437,7 @@
       stars: 4,
       count: 229
     },
-    price: 3890,
+    priceCents: 3890,
     keywords: [
       "shoes",
       "running shoes",
@@ -451,7 +453,7 @@
       stars: 3.5,
       count: 42
     },
-    price: 1690,
+    priceCents: 1690,
     keywords: [
       "sunglasses",
       "glasses",
@@ -467,7 +469,7 @@
       stars: 4.5,
       count: 511
     },
-    price: 6797,
+    priceCents: 6797,
     keywords: [
       "cooking set",
       "kitchen"
@@ -481,7 +483,7 @@
       stars: 4.5,
       count: 130
     },
-    price: 1649,
+    priceCents: 1649,
     keywords: [
       "bathroom",
       "washroom",
@@ -497,7 +499,7 @@
       stars: 4.5,
       count: 248
     },
-    price: 2400,
+    priceCents: 2400,
     keywords: [
       "pants",
       "sweatpants",
@@ -514,7 +516,7 @@
       stars: 4.5,
       count: 117
     },
-    price: 2400,
+    priceCents: 2400,
     keywords: [
       "accessories",
       "womens"
@@ -528,7 +530,7 @@
       stars: 4,
       count: 126
     },
-    price: 2899,
+    priceCents: 2899,
     keywords: [
       "boxes",
       "food containers",
@@ -543,7 +545,7 @@
       stars: 4.5,
       count: 1211
     },
-    price: 2250,
+    priceCents: 2250,
     keywords: [
       "coffeemakers",
       "kitchen",
@@ -558,7 +560,7 @@
       stars: 4.5,
       count: 363
     },
-    price: 3099,
+    priceCents: 3099,
     keywords: [
       "bedroom",
       "home"
@@ -572,7 +574,7 @@
       stars: 4.5,
       count: 93
     },
-    price: 2110,
+    priceCents: 2110,
     keywords: [
       "bathroom",
       "home",
@@ -587,7 +589,7 @@
       stars: 4,
       count: 89
     },
-    price: 3390,
+    priceCents: 3390,
     keywords: [
       "shoes",
       "running shoes",
@@ -603,7 +605,7 @@
       stars: 4,
       count: 3
     },
-    price: 10747,
+    priceCents: 10747,
     keywords: [
       "food blenders",
       "kitchen",
@@ -618,7 +620,7 @@
       stars: 5,
       count: 679
     },
-    price: 3899,
+    priceCents: 3899,
     keywords: [
       "mixing bowls",
       "baking",
@@ -634,7 +636,7 @@
       stars: 4.5,
       count: 1045
     },
-    price: 5799,
+    priceCents: 5799,
     keywords: [
       "kitchen",
       "kitchen towels",
@@ -649,12 +651,12 @@
       stars: 4.5,
       count: 3157
     },
-    price: 2400,
+    priceCents: 2400,
     keywords: [
       "sweaters",
       "hoodies",
       "apparel",
       "mens"
     ]
-  }
+  } */
 ];
